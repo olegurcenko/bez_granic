@@ -1,0 +1,64 @@
+@import '../../../../media/scss/colors';
+@keyframes open {
+	from {
+		left: -100%;
+	}
+	to {
+		left: 0;
+	}
+}
+.popup {
+	animation: open .8s 1;
+	z-index: 100;
+	position: fixed;
+	top: 70px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	//background: $color-2-half;
+	display: flex;
+	//align-items: center;
+	//justify-content: center;
+  }
+  
+  @keyframes close {
+	from {
+	  left: 0;
+	}
+	to {
+	  left: -100%;
+	}
+}
+
+  .popupClosing {
+	animation: close .8s 1;
+	z-index: 100;
+	position: fixed;
+	top: 70px;
+	left: 0;
+	width: fit-content;
+	height: 100%;
+	display: flex;
+	//align-items: center;
+	//justify-content: center;
+}
+
+.popupContent {
+	width: fit-content;
+	background: $color-2-half;
+	padding: 60px; /* Increase padding for a larger popup */
+	//position: relative;
+	text-align: center; /* Center the links */
+  }
+  .linkColumn {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .service {
+	text-decoration: none;
+	color: $color-grey; /* Adjust link color */
+	margin-bottom: 20px; /* Add more spacing between links */
+	font-size: 20px; /* Increase link font size */
+  }
+  

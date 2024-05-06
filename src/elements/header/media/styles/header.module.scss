@@ -1,0 +1,229 @@
+@import '../../../../media/scss/colors';
+
+@media screen and (max-width: 1200px) {
+	
+	.headerTop {
+		display: none !important;
+	}
+	
+	.headerBottom {
+		.services {
+			display: none !important;
+		}
+		padding-block: 5px;
+		.logo {
+			margin-left: 10px;
+			img {
+				height: 50px!important;
+			}
+		}
+		.menuBtn {
+			display: block !important;
+			margin-right: 20px;
+	
+			.menu {
+				--s: 20px;
+				/* control the size */
+				--c: black;
+				/* the color */
+	
+				height: var(--s);
+				aspect-ratio: 1;
+				border: none;
+				padding: 0;
+				border-inline: calc(var(--s)/2) solid #0000;
+				box-sizing: content-box;
+				--_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
+				--_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
+				background:
+					var(--_g2) left var(--_p, 0px) top,
+					var(--_g1) left calc(var(--s)/10 + var(--_p, 0px)) top,
+					var(--_g2) right var(--_p, 0px) top,
+					var(--_g1) right calc(var(--s)/10 + var(--_p, 0px)) top;
+				background-size:
+					20% 80%,
+					40% 100%;
+				position: relative;
+				clip-path: inset(0 25%);
+				-webkit-mask: linear-gradient(90deg, #0000, #000 25% 75%, #0000);
+				cursor: pointer;
+				transition:
+					background-position .3s var(--_s, .3s),
+					clip-path 0s var(--_s, .6s);
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+	
+				&:before,
+				&:after {
+					content: "";
+					position: absolute;
+					border-radius: var(--s);
+					inset: 40% 0;
+					background: var(--c);
+					transition: transform .3s calc(.3s - var(--_s, .3s));
+				}
+	
+				&:checked {
+					clip-path: inset(0);
+					--_p: calc(-1*var(--s));
+					--_s: 0s;
+				}
+	
+				&:checked:before {
+					transform: rotate(45deg);
+				}
+	
+				&:checked:after {
+					transform: rotate(-45deg);
+				}
+	
+				&:focus-visible {
+					clip-path: none;
+					-webkit-mask: none;
+					border: none;
+					outline: 2px solid var(--c);
+					outline-offset: 5px;
+				}
+			}
+		}
+		.buttonForContact {
+			position: absolute;
+			right: 80px;
+			button {
+				height: 40px!important;
+				padding: 7px 10px!important;
+			}
+		}
+	}
+
+	
+}
+
+.header {
+	position: fixed;
+	font-weight: 500;
+	font-size: 16px;
+	width: 100%;
+	color: $color-grey;
+	background-color: $color-3;
+	//background-color: $color-2;
+
+	.headerTop {
+		max-width: 1200px;
+		margin-inline: auto;
+		display: flex;
+		justify-content: space-around;
+		padding-block: 5px;
+
+		li {
+			width: 25%;
+		}
+
+		.links {
+			justify-content: space-between;
+			display: flex;
+
+			.link {
+				img {
+					height: 25px;
+				}
+			}
+		}
+	}
+
+	.headerBottom {
+		display: flex;
+		padding-block: 10px;
+		max-width: 1200px;
+		margin-inline: auto;
+		justify-content: space-between;
+		align-items: center;
+
+		.logo {
+			display: flex;
+			align-items: center;
+			img {
+				height: 90px;
+			}
+
+			width: 90px;
+		}
+
+		.services {
+			width: 60%;
+			display: flex;
+			justify-content: space-around;
+
+			.service {
+				//padding: 3px 10px;
+				border-radius: 5px;
+				color: $color-grey;
+				text-decoration: none;
+			}
+		}
+
+		@media screen and (min-width: 1200px) {
+			.menuBtn {
+				display: none;
+			}
+		}
+
+		.buttonForContact {
+			button {
+				appearance: none;
+				backface-visibility: hidden;
+				background-color: $color-2-half;
+				border-radius: 10px;
+				border-style: none;
+				box-shadow: none;
+				box-sizing: border-box;
+				color: $color-grey;
+				cursor: pointer;
+				display: inline-block;
+				font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+				font-size: 15px;
+				height: 50px;
+				letter-spacing: normal;
+				line-height: 1.5;
+				outline: none;
+				overflow: hidden;
+				padding: 14px 30px;
+				position: relative;
+				text-align: center;
+				text-decoration: none;
+				transform: translate3d(0, 0, 0);
+				transition: all .3s;
+				user-select: none;
+				-webkit-user-select: none;
+				touch-action: manipulation;
+				vertical-align: top;
+				white-space: nowrap;
+
+				&:hover {
+					background-color: $color-2;
+					color: $color-white;
+					box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+					opacity: 1;
+					transform: translateY(0);
+					transition-duration: .35s;
+				}
+
+				&:hover:after {
+					opacity: .5;
+				}
+
+				&:active {
+					box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+					transform: translateY(2px);
+					transition-duration: .35s;
+				}
+
+				&:active:after {
+					opacity: 1;
+				}
+			}
+
+		}
+	}
+}

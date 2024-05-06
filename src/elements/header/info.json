@@ -1,0 +1,27 @@
+{
+	"adress": "г. Минск, ул. Мележа 5/1",
+	"working_hours": "9.00-20.00 пн.-сб. (предв. запись)",
+	"phone_number": "+375 29 120 32 42",
+	"links": [
+		{
+			"web_name": "instagram",
+			"url": "https://www.instagram.com/bezgranits_nikolaeva",
+			"status": true
+		},
+		{
+			"web_name": "telegram",
+			"url": "lorem",
+			"status": true
+		},
+		{
+			"web_name": "facebook",
+			"url": "lorem",
+			"status": true
+		},
+		{
+			"web_name": "vk",
+			"url": "lorem",
+			"status": true
+		}
+	]
+}
