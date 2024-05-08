@@ -1,4 +1,4 @@
-@import '../../../../media/scss/colors';
+@import '../../../../media/scss/colors.module';
 
 @media screen and (max-width: 1200px) {
 	
@@ -23,9 +23,7 @@
 	
 			.menu {
 				--s: 20px;
-				/* control the size */
 				--c: black;
-				/* the color */
 	
 				height: var(--s);
 				aspect-ratio: 1;
@@ -102,31 +100,29 @@
 
 .header {
 	position: fixed;
+	z-index: 20;
 	font-weight: 500;
 	font-size: 16px;
 	width: 100%;
 	color: $color-grey;
 	background-color: $color-3;
-	//background-color: $color-2;
 
 	.headerTop {
 		max-width: 1200px;
 		margin-inline: auto;
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
+		align-items: center;
 		padding-block: 5px;
 
-		li {
-			width: 25%;
-		}
-
 		.links {
+			width: 20%;
 			justify-content: space-between;
 			display: flex;
-
+			align-items: center;
 			.link {
 				img {
-					height: 25px;
+					height: 35px;
 				}
 			}
 		}
@@ -181,7 +177,6 @@
 				color: $color-grey;
 				cursor: pointer;
 				display: inline-block;
-				font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
 				font-size: 15px;
 				height: 50px;
 				letter-spacing: normal;

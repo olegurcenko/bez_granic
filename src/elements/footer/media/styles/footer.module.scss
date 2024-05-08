@@ -1,0 +1,79 @@
+@import '../../../../media/scss/colors.module';
+.footer {
+	position: absolute;
+	bottom: 0px;
+	background-color: $color-2;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	.footerWrapper {
+		width: 1200px;
+		//margin-inline: auto;
+		@media screen and (max-width: 900px) {
+			.desktopInfo {
+				display: none;
+			}
+			.mobileInfo {
+				margin-inline: auto;
+				padding-block: 20px;
+				li {
+					text-align: center;
+					.mobileLink, p {
+						font-size: 16px;
+						color: $color-white;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		@media screen and (min-width: 900px) {
+			.desktopInfo {
+				padding-block: 20px;
+				margin-inline: 20px;
+				display: flex;
+				justify-content: space-between;
+				.infoColumn {
+					display: flex;
+					flex-direction: column;
+					justify-content: start;
+					li {
+						margin-bottom: 20px;
+						.textLink, p {
+							font-size: 16px;
+							text-decoration: none;
+							color: $color-white;
+						}
+					}
+					.logo, .title {
+						height: 70px;
+						display: flex;
+						align-items: center;
+						color: $color-white;					
+						img {
+							width: 70px;
+							background-color: $color-white;
+							border-radius: 20px;
+						}
+					}
+					.links {
+						display: flex;
+						.link {
+							margin-right: 20px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							img {
+								background-color: $color-white;
+								width: 25px;
+								border-radius: 50%;
+							}
+						}
+					}
+				}
+			}
+			.mobileInfo {
+				display: none;
+			}
+		}
+	}
+}

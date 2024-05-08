@@ -1,4 +1,4 @@
-@import '../../../../media/scss/colors';
+@import '../../../../media/scss/colors.module';
 @keyframes open {
 	from {
 		left: -100%;
@@ -44,21 +44,53 @@
 }
 
 .popupContent {
+	z-index: inherit;
 	width: fit-content;
 	background: $color-2-half;
-	padding: 60px; /* Increase padding for a larger popup */
-	//position: relative;
-	text-align: center; /* Center the links */
-  }
-  .linkColumn {
+	padding: 40px;
+	text-align: center;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-around;
+	overflow-y: scroll;
+	.linkColumn {
+	  display: flex;
+	  flex-direction: column;
+	  .service {
+		text-decoration: none;
+		color: $color-grey; 
+		font-weight: 400;
+	
+		margin-bottom: 20px;
+		font-size: 24px; 
+	  }
+	}
+	.links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.link {
+			width: 45px;
+			height: 45px;
+			background-color: $color-white;
+			margin-bottom: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50px;
+			img {
+				width: 45px; 
+			}
+		}
+	}
+	.contacts {
+		//position: relative;
+		//bottom: -200px;
+		margin-bottom: 30px;
+		p {
+			font-size: 16px;
+		}
+	}
   }
   
-  .service {
-	text-decoration: none;
-	color: $color-grey; /* Adjust link color */
-	margin-bottom: 20px; /* Add more spacing between links */
-	font-size: 20px; /* Increase link font size */
-  }
   

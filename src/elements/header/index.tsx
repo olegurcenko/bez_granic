@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import data from './info.json';
-import inst_img from './media/inst.webp';
-import tg_img from './media/tg.webp';
-import vk_img from './media/vk.png';
-import fb_img from './media/fb.webp'
-import logo from './media/logo.png'
+import data from '../info.json';
+import inst_img from '../media/inst.webp';
+import tg_img from '../media/tg.webp';
+import vk_img from '../media/vk.png';
+import fb_img from '../media/fb.webp'
+import logo from '../media/logo.png'
 import { Link } from "react-router-dom";
 import styles from './media/styles/header.module.scss'
 import { Menu } from "../menu";
-
+import { Button } from "@mui/material";
+import colors from '../../media/scss/_colors.module.scss'
 export const Header: React.FC = () => {
     const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
     const [isMenuClosing, setMenuClosing] = useState<boolean>(false);
@@ -57,14 +58,30 @@ export const Header: React.FC = () => {
                     <img src={logo} alt="" />
                 </li>
                 <li className={styles.services}>
-                    <Link className={styles.service} to={''}>Услуги</Link>
-                    <Link className={styles.service} to={''}>Цены</Link>
-                    <Link className={styles.service} to={''}>О Центре</Link>
-                    <Link className={styles.service} to={''}>Специалисты</Link>
-                    <Link className={styles.service} to={''}>Контакты</Link>
+                    <Link className={styles.service} to={''}>
+                        <Button sx={{color: colors.colorGrey}}>
+                            Услуги</Button>
+                    </Link>
+
+                    <Link className={styles.service} to={''}>
+                        <Button sx={{color: colors.colorGrey}}>
+                            Цены</Button>
+                    </Link>
+                    <Link className={styles.service} to={''}>
+                        <Button sx={{color: colors.colorGrey}}>
+                            О Центре</Button>
+                    </Link>
+                    <Link className={styles.service} to={''}>
+                        <Button sx={{color: colors.colorGrey}}>
+                            Специалисты</Button>
+                    </Link>
+                    <Link className={styles.service} to={''}>
+                        <Button sx={{color: colors.colorGrey}}>
+                            Контакты</Button>
+                    </Link>
                 </li>
                 <li className={styles.buttonForContact}>
-                    <button>Записаться</button>
+                    <Button>Записаться</Button>
                 </li>
                 <li className={styles.menuBtn}>
                     <input onClick={isMenuOpen ? closeMenu : openMenu} checked={!menuCloserBtn} type="checkbox" role="button" aria-label="Display the menu" className={styles.menu}/>
