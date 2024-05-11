@@ -1,6 +1,7 @@
 {
   "name": "ps_school",
   "version": "0.1.0",
+  "homepage": "https://olegurcenko.github.io/bez_granic",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",

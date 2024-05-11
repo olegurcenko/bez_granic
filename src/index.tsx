@@ -4,6 +4,7 @@ import './index.css';
 import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 import { createTheme, ThemeProvider } from '@mui/material';
+import { HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,9 +15,11 @@ const theme = createTheme({
   },
 });
 root.render(
-  <ThemeProvider theme={theme}>
-    <App />
-  </ThemeProvider>
+  <HashRouter>
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  </HashRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

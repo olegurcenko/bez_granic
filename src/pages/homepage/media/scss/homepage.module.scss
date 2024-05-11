@@ -1,12 +1,16 @@
 @media screen and (max-width: 1200px) {
 	.homepage {
-		margin-top: 70px!important;
+		position: relative;
+		top: 70px;
+		margin-bottom: 80px;
 	}
 }
 .homepage {
 	max-width: 1200px;
 	margin-inline: auto;
-	margin-top: 165px;
+	position: relative;
+	top: 165px;
+	margin-bottom: 175px;
 	.card {
 		width: 350px;
 		.cardImg {

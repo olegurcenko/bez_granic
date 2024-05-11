@@ -7,13 +7,10 @@ import { AppRouter } from './routes';
 
 export const App: React.FC = () => {
   return (
-    <Router>
       <>
       <Header/>
-        hello
         <AppRouter/>
-      {/*<Footer/>*/}
+      <Footer/>
       </>
-    </Router>
   );
 }

@@ -55,7 +55,9 @@ export const Header: React.FC = () => {
             </ul>
             <ul className={styles.headerBottom}>
                 <li className={styles.logo}>
-                    <img src={logo} alt="" />
+                    <Link to={'/'}>
+                        <img src={logo} alt="" />
+                    </Link>
                 </li>
                 <li className={styles.services}>
                     <Link className={styles.service} to={''}>

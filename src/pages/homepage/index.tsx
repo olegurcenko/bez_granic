@@ -14,7 +14,11 @@ import { Link } from "react-router-dom";
 export const Homepage: React.FC = () => {
     return (
         <section className={styles.homepage}>
-            <Typography variant="h3" color={colors.colorGrey}>Наши направления</Typography>
+            <Typography variant="h3" color={colors.colorGrey} sx={{
+				'@media screen and (max-width: 1200px)': {
+					textAlign: 'center'
+				}
+			}}>Наши направления</Typography>
             <Divider sx={{marginBlock: 3}} />
             <Box component="ul" sx={{ display: 'flex', justifyContent: "center", alignItems: "center", gap: 2, flexWrap: 'wrap', p: 0, marginBlock: 4 }}>
                 {[
@@ -26,7 +30,7 @@ export const Homepage: React.FC = () => {
                     { img: play_therapy_img, title: 'Игровая терапия', link: 'play-therapy' },
                     { img: sensory_integration_img, title: 'Сенсорная интеграция', link: 'sensory-integration' },
                 ].map((item, index) => (
-                    <Link to={`/${item.link}`} key={index} className={styles.link}>
+                    <Link to={`/definition?service=${item.link}`} key={index} className={styles.link}>
                         <Button sx={{
                             p: 0,
                             transition: 'transform .5s',

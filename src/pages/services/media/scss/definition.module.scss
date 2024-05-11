@@ -1,0 +1,47 @@
+.serviceDefinitionPage {
+	@media screen and (min-width: 900px) {
+		position: relative;
+		top: 180px;
+		margin-bottom: 180px;
+		max-width: 1200px;
+		margin-inline: auto;
+		.definition {
+			font-size: 24px;
+			text-align: justify;
+		}
+		.howWorks {
+			font-size: 24px;
+			text-align: justify;
+		}
+		.advantages {
+			.advantage {
+				font-size: 24px;
+				text-align: justify;
+			}
+		}
+	}
+	@media screen and (max-width: 900px) {
+		position: relative;
+		top: 70px;
+		margin-bottom: 180px;
+		max-width: 1200px;
+		margin-inline: auto;
+		.definition {
+			font-size: 16px;
+			margin-inline: 10px;
+			text-align: justify;
+		}
+		.howWorks {
+			font-size: 16px;
+			margin-inline: 10px;
+			text-align: justify;
+		}
+		.advantages {
+			.advantage {
+				font-size: 16px;
+				//margin-inline: 10px;
+				text-align: justify;
+			}
+		}
+	}
+}
