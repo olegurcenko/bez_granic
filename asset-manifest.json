@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/bez_granic/static/css/main.be2b66ce.css",
+    "main.js": "/bez_granic/static/js/main.bb314a52.js",
+    "static/js/453.9dd993af.chunk.js": "/bez_granic/static/js/453.9dd993af.chunk.js",
+    "static/media/aba_therapy.jpg": "/bez_granic/static/media/aba_therapy.ab0684ed6cf283bd2d11.jpg",
+    "static/media/communication_groups.jpg": "/bez_granic/static/media/communication_groups.811a30332962422d85c8.jpg",
+    "static/media/logopedical_massage.jpg": "/bez_granic/static/media/logopedical_massage.5c3019529b5a2d8c3ab3.jpg",
+    "static/media/neurocorrection.jpg": "/bez_granic/static/media/neurocorrection.6d86d6efc2abdd6873df.jpg",
+    "static/media/sensory_integration.jpg": "/bez_granic/static/media/sensory_integration.d8312e55ada5eeb9b0f2.jpg",
+    "static/media/logopedia.jpg": "/bez_granic/static/media/logopedia.7c3092191cdf49d72388.jpg",
+    "static/media/logo.png": "/bez_granic/static/media/logo.b49905565f9ffadd4a56.png",
+    "static/media/play_therapy.webp": "/bez_granic/static/media/play_therapy.f93d99cd404fc0407880.webp",
+    "static/media/inst.webp": "/bez_granic/static/media/inst.a208c167db9ab3907ada.webp",
+    "static/media/tg.webp": "/bez_granic/static/media/tg.87329ba581ba1d6b34bb.webp",
+    "static/media/vk.png": "/bez_granic/static/media/vk.ee152c1ea060b77f5199.png",
+    "static/media/fb.webp": "/bez_granic/static/media/fb.150b6df01af6829e90ca.webp",
+    "index.html": "/bez_granic/index.html",
+    "main.be2b66ce.css.map": "/bez_granic/static/css/main.be2b66ce.css.map",
+    "main.bb314a52.js.map": "/bez_granic/static/js/main.bb314a52.js.map",
+    "453.9dd993af.chunk.js.map": "/bez_granic/static/js/453.9dd993af.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be2b66ce.css",
+    "static/js/main.bb314a52.js"
+  ]
+}
